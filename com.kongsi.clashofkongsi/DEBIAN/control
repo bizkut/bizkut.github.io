@@ -1,0 +1,12 @@
+Package: com.kongsi.clashofkongsi
+Name: Clash of Kongsi
+Version: 7.200.19
+Architecture: iphoneos-arm
+Description: Clash of Kongsi custom game client
+Homepage: http://bizkut.github.io
+Depiction: http://bizkut.github.io
+Maintainer: Admin Kongsi <admin@kongsi.asia>
+Author: Admin Kongsi <admin@kongsi.asia>
+Section: Games
+Depends: firmware(>= 5.1.1)
+Icon: file:///Applications/Clash of Kongsi.app/Icon.png
