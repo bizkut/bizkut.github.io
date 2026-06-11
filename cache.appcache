@@ -78,6 +78,8 @@ payloads/backpork/metadata.json #d7bb8b7374307230fc82d22e6978cb62675c38575c474b2
 payloads/backpork/0.1/ps5-backpork.elf #f76dd1885ef6aebec55e12a71b32a6bbf0e1cafb9146960a51b231fd52b914fe
 payloads/payload-manager/metadata.json #45c13934e1f05f0765c1af3726e2302c67e393639fa24ebd86eef7a97b3f0259
 payloads/payload-manager/0.3.1/pldmgr_v0.3.1.elf #518740adbacccb9094fadb07dd424c53ee290f38306449ccc9d6957fdf813c0b
+
+# deploy-refresh 2026-06-12-ps5-linux-loader
 payloads/uds-trophy-unlocker/metadata.json #2130936b2173a294f39ba4f83a15ef64b5aad1ddc99a10d1506b91047086b263
 payloads/uds-trophy-unlocker/1.0.0/trophy_unlocker_allfw.elf #a7a9133a63c1c8ea2ae802fd256d6d2eaea03e7cca5148b8f6cb264ce454974b
 payloads/ps5debug/metadata.json #9f1e6f4d7780e1d9182f670bb058dc5a6075a46a314a6d7b486cac534c475fd2
