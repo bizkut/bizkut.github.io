@@ -1,3 +1,5 @@
-repo
-===
-The publc APT / Cydia repository of /u/WinneonSword.
+# bizkut.github.io
+
+Root GitHub Pages host for UMTX2.
+
+Live site: https://bizkut.github.io/
