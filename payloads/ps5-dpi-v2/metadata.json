@@ -1,0 +1,30 @@
+{
+  "license": {
+    "type": "Unknown",
+    "url": "https://github.com//blob/main/LICENSE"
+  },
+  "id": "ps5-dpi-v2",
+  "displayTitle": "PS5 DPI v2",
+  "description": "etaHEN-compatible HTTP package installer - serves a web form on port 12800 to install PKG files by URL. Works on FW 4.03 through 13.20+.",
+  "authors": [
+    "soniciso"
+  ],
+  "projectUrl": "https://git.earthonion.com/soniciso/ps5-dpi-v2",
+  "sourceRepo": "",
+  "toPort": 9021,
+  "versions": [
+    {
+      "version": "1.0.0",
+      "fileName": "dpiv2.elf",
+      "filePath": "payloads/ps5-dpi-v2/1.0.0/dpiv2.elf",
+      "downloadUrl": "",
+      "hash": "aba9e80523899ea59f7fec47ff960096cfba6cc9521115bfe62275d3fae95c22",
+      "fileSize": 99560,
+      "releaseDate": "2026-05-31",
+      "isDefault": true,
+      "isPreRelease": false,
+      "changelog": []
+    }
+  ],
+  "supportedFirmwares": []
+}

@@ -1,0 +1,130 @@
+{
+  "license": {
+    "type": "GPL-3.0",
+    "url": "https://github.com/OpenSourcereR-dev/ps5debug-NG/blob/main/LICENSE"
+  },
+  "id": "ps5debug-ng",
+  "displayTitle": "ps5debug-NG",
+  "description": "PS5 debugger payload - userland TCP wire-protocol server hosted inside SceShellCore (successor to GoldHEN/ps5debug)",
+  "authors": [
+    "OpenSourcereR-dev"
+  ],
+  "projectUrl": "https://github.com/OpenSourcereR-dev/ps5debug-NG",
+  "sourceRepo": "OpenSourcereR-dev/ps5debug-NG",
+  "toPort": 9021,
+  "supportedFirmwares": [],
+  "versions": [
+    {
+      "version": "1.2.7",
+      "fileName": "ps5debug-NG_v1.2.7.elf",
+      "filePath": "payloads/ps5debug-ng/1.2.7/ps5debug-NG_v1.2.7.elf",
+      "downloadUrl": "https://github.com/OpenSourcereR-dev/ps5debug-NG/releases/download/1.2.7/ps5debug-NG_v1.2.7.elf",
+      "hash": "bfb07865611df05d4a07236f375e7e0b64e2f387124052fa67510f8b4fcae1a7",
+      "fileSize": 3994008,
+      "releaseDate": "2026-06-03",
+      "isDefault": true,
+      "isPreRelease": false,
+      "changelog": [
+        "\ud83d\udc1b Fixed a **critical bug** - console crash (KP) when rescanning with \"between\".",
+        "No other changes from v1.2.6 revision1 (which added the FW 8.40+ poke/breakpoint fix)."
+      ]
+    },
+    {
+      "version": "1.2.6",
+      "fileName": "ps5debug-NG_v1.2.6-revision1.elf",
+      "filePath": "payloads/ps5debug-ng/1.2.6/ps5debug-NG_v1.2.6-revision1.elf",
+      "downloadUrl": "https://github.com/OpenSourcereR-dev/ps5debug-NG/releases/download/1.2.6/ps5debug-NG_v1.2.6-revision1.elf",
+      "hash": "902dd3a34aa78d34966513846867b93cd9046c2c35207a05a4779b92748adc2f",
+      "fileSize": 3994008,
+      "releaseDate": "2026-06-02",
+      "isDefault": false,
+      "isPreRelease": false,
+      "changelog": [
+        "v1.2.5 added *initial* support for FW 8.x-13.x. **v1.2.6 makes it actually functional** and adds hardware verification across most firmwares.",
+        "\u2705 **Hardware-verified: FW 4.x, 6.x, 8.x, 9.x, 10.x and 12.x** - poke, software + hardware breakpoints, all watchpoint types, title ID, content ID and version confirmed working.",
+        "\u26a0\ufe0f **FW 3.x, 5.x, 7.x, 11.x and 13.x: supported but not yet fully tested.** The fixes are firmware-agnostic by design. Feedback welcome.",
+        "Pokes silently failed on FW \u2265 9 (the kernel blocks the old mdbg write path there). Writes now go through a DMAP page-table walk, so **poking, cheats and patches work again on 9.x-13.x**. (mdbg stays the path on FW \u2264 8.x.)",
+        "Newly allocated memory is pre-faulted so writes land correctly.",
+        "Hardware breakpoints/watchpoints were silently doing nothing on 9.x+ - now enabled across 9.00-13.20.",
+        "Software (INT3) breakpoints now write correctly on 9.x+ (same DMAP fix as poke).",
+        "Fixed breakpoints/watchpoints that **fired a few times then stopped** on FW 11/12 (the debug-status register wasn't being cleared between hits).",
+        "Game **title ID, content ID and version** are detected by scanning the process instead of per-firmware offsets (which shifted at 8.x and 12.x). Reaper / Cheater again show the running game correctly on newer firmware.",
+        "Closing the client mid-operation (e.g. during a scan) could **crash the whole console** by killing SceShellCore. Now suppressed - disconnecting is safe. Affects all firmwares."
+      ]
+    },
+    {
+      "version": "1.2.5",
+      "fileName": "ps5debug-NG_v1.2.5.elf",
+      "filePath": "payloads/ps5debug-ng/1.2.5/ps5debug-NG_v1.2.5.elf",
+      "downloadUrl": "https://github.com/OpenSourcereR-dev/ps5debug-NG/releases/download/1.2.5/ps5debug-NG_v1.2.5.elf",
+      "hash": "a2e88c191245aefa7d9a0ff35923c779924d65a6d40d60eda8cfb43764f9988d",
+      "fileSize": 3994008,
+      "releaseDate": "2026-05-31",
+      "isDefault": false,
+      "isPreRelease": false,
+      "changelog": [
+        "**Added initial support for FW 8.x, 9.x, 10.x, 11.x, 12.x and 13.x.** \u26a0\ufe0f These are *initial support - testing required* (not yet hardware-validated). Feedback from users on these firmwares is welcome.",
+        "**FW 6.x and 7.61 are hardware-validated.**",
+        "Previously these firmwares failed to install (`SceShellCore not found`) and, even when forced, showed **blank process names** and **truncated memory maps**. All fixed:",
+        "Install now succeeds.",
+        "`PROC_INFO` / `PROC_LIST` show correct process names.",
+        "`PROC_MAPS` returns the complete memory map.",
+        "**Firmware-agnostic process lookup** - the installer now locates the target via a stable system call instead of per-firmware kernel offsets, making install more robust across firmwares.",
+        "**Kernel-patch guard** - the installer now detects when the jailbreak has *already* applied the kernel patch and skips re-writing it, **preventing a kernel panic** seen on 7.61.",
+        "**Corrected per-firmware process-info offsets** - process name / path / title ID / content ID now read correctly on 6.x and newer (were frozen at 4.x values and came back empty on 6.x+).",
+        "Added **EchoStretch** and **Sonic-Iso** to the special thanks."
+      ]
+    },
+    {
+      "version": "1.2.4",
+      "fileName": "ps5debug-NG.elf",
+      "filePath": "payloads/ps5debug-ng/1.2.4/ps5debug-NG.elf",
+      "downloadUrl": "https://github.com/OpenSourcereR-dev/ps5debug-NG/releases/download/1.2.4/ps5debug-NG.elf",
+      "hash": "4aaa956045e6c0c7867537eb00b5de2e5166ba3434e042bf877078fbf92c6e03",
+      "fileSize": 3993960,
+      "releaseDate": "2026-05-30",
+      "isDefault": false,
+      "isPreRelease": false,
+      "changelog": [
+        "Features",
+        "CMD_PROC_MAPS now augments the vm_map list with Sony-aux regions",
+        "(SceGnm/SceAgc/JIT/DMEM) that bypass vm_map, discovered via a kernel-side",
+        "x86-64 page-table walk over the DMAP. FW-agnostic (runtime pmap-offset",
+        "discovery + ground-truth validation); falls back to the plain vm_map result",
+        "on any failure.",
+        "Hybrid memory-read path: reads route DMAP-direct for vm_map-absent (aux)",
+        "regions and mdbg otherwise (and as fallback), improve aux scans performance on",
+        "both the CMD_PROC_READ and server-side scan paths. No protocol change;",
+        "byte-identical results."
+      ]
+    },
+    {
+      "version": "1.2.3",
+      "fileName": "ps5debug-NG.elf",
+      "filePath": "payloads/ps5debug-ng/1.2.3/ps5debug-NG.elf",
+      "downloadUrl": "https://github.com/OpenSourcereR-dev/ps5debug-NG/releases/download/1.2.3/ps5debug-NG.elf",
+      "hash": "286a785b1fa0a93f2bf55b07025dc125918f37d842f3f7d20509d445dbd69211",
+      "fileSize": 3975240,
+      "releaseDate": "2026-05-15",
+      "isDefault": false,
+      "isPreRelease": false,
+      "changelog": [
+        "Hotfix: Fixed a rare save-corruption issue"
+      ]
+    },
+    {
+      "version": "1.2.2",
+      "fileName": "ps5debug-NG.elf",
+      "filePath": "payloads/ps5debug-ng/1.2.2/ps5debug-NG.elf",
+      "downloadUrl": "https://github.com/OpenSourcereR-dev/ps5debug-NG/releases/download/1.2.2/ps5debug-NG.elf",
+      "hash": "64f2a69f7d2a0c6fdb57468acc720e24bbfe57d5e389698b7e072094f94cc2a6",
+      "fileSize": 3975240,
+      "releaseDate": "2026-05-14",
+      "isDefault": false,
+      "isPreRelease": false,
+      "changelog": [
+        "Initial stable public release"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "license": {
+    "type": "Unknown",
+    "url": "https://github.com//blob/main/LICENSE"
+  },
+  "id": "uds-trophy-unlocker",
+  "displayTitle": "UDS Trophy Unlocker",
+  "description": "All-firmware (4.03-12.70) PS5 trophy unlocker - a single ELF that auto-patches SceShellCore for the active firmware and unlocks trophies from inside running games via the Universal Data System.",
+  "authors": [
+    "soniciso"
+  ],
+  "projectUrl": "https://git.earthonion.com/soniciso/uds-trophy-unlocker",
+  "sourceRepo": "",
+  "toPort": 9021,
+  "versions": [
+    {
+      "version": "1.0.0",
+      "fileName": "trophy_unlocker_allfw.elf",
+      "filePath": "payloads/uds-trophy-unlocker/1.0.0/trophy_unlocker_allfw.elf",
+      "downloadUrl": "",
+      "hash": "a7a9133a63c1c8ea2ae802fd256d6d2eaea03e7cca5148b8f6cb264ce454974b",
+      "fileSize": 169336,
+      "releaseDate": "2026-05-26",
+      "isDefault": true,
+      "isPreRelease": false,
+      "changelog": []
+    }
+  ],
+  "supportedFirmwares": []
+}

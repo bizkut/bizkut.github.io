@@ -1,0 +1,114 @@
+{
+  "license": {
+    "type": "GPL-3.0",
+    "url": "https://github.com/itsPLK/ps5-payload-manager/blob/main/LICENSE"
+  },
+  "id": "payload-manager",
+  "displayTitle": "Payload Manager",
+  "description": "Web-based payload manager dashboard - import payloads and auto-load them on every boot through a browser UI",
+  "authors": [
+    "itsPLK",
+    "owendswang"
+  ],
+  "projectUrl": "https://github.com/itsPLK/ps5-payload-manager",
+  "sourceRepo": "itsPLK/ps5-payload-manager",
+  "toPort": 9021,
+  "versions": [
+    {
+      "version": "0.3.1",
+      "fileName": "pldmgr_v0.3.1.elf",
+      "filePath": "payloads/payload-manager/0.3.1/pldmgr_v0.3.1.elf",
+      "downloadUrl": "https://github.com/itsPLK/ps5-payload-manager/releases/download/v0.3.1/pldmgr_v0.3.1.elf",
+      "hash": "518740adbacccb9094fadb07dd424c53ee290f38306449ccc9d6957fdf813c0b",
+      "fileSize": 2050320,
+      "releaseDate": "2026-06-06",
+      "isDefault": true,
+      "isPreRelease": false,
+      "changelog": [
+        "Fixed an issue where installed payloads were not showing on the dashboard for some users ([#28](https://github.com/itsPLK/ps5-payload-manager/issues/28)).",
+        "Restored the USB scanning limit strictly to the root level.",
+        "Added options to copy instead of move when importing payloads from USB.",
+        "---",
+        "You do **not** need to manually download or replace your original `pldmgr.elf` file.",
+        "Simply install the update directly within the Payload Manager app (from the repository).",
+        "The updated version will automatically launch on every subsequent startup, regardless of whether you load the old or new `.elf` file initially.",
+        "This means **you don't need to update your autoloader config** or replace any files on your console/USB!"
+      ]
+    },
+    {
+      "version": "0.3.0",
+      "fileName": "pldmgr_v0.3.0.elf",
+      "filePath": "payloads/payload-manager/0.3.0/pldmgr_v0.3.0.elf",
+      "downloadUrl": "https://github.com/itsPLK/ps5-payload-manager/releases/download/v0.3.0/pldmgr_v0.3.0.elf",
+      "hash": "18cdd03af7aed869be8e9ca37856ad159f34d8e816a036f366d176bf8516821d",
+      "fileSize": 2050320,
+      "releaseDate": "2026-06-04",
+      "isDefault": false,
+      "isPreRelease": false,
+      "changelog": [
+        "**Multi-Source Payload Repositories**: Added support for adding, removing, and reordering third-party payload repository URLs via a new **Manage Sources** settings view. Payloads within the **Storage Hub** are now grouped by source with dedicated catalogs and origin badges. ([f4c76fb](https://github.com/itsPLK/ps5_next_menu/commit/f4c76fb))",
+        "**Active Processes Management**: Added a dedicated **Active Processes** dashboard tab to view real-time processes, PIDs, and memory footprint, with support for terminating them via SIGKILL. ([631e7de](https://github.com/itsPLK/ps5_next_menu/commit/631e7de))",
+        "**Alphabetical Sorting & Repository Polish**: As the payload repository grew larger, sorting by payload update date became cluttered. Repository payloads are now sorted alphabetically by name (with available updates pinned to the top), and also display payload version/update information. ([293f44b](https://github.com/itsPLK/ps5_next_menu/commit/293f44b))",
+        "**UI & Mobile Layout Polish**:",
+        "Optimized card layouts on mobile to eliminate wasted vertical space and prevent overlapping text on narrow viewports. ([af72c9b](https://github.com/itsPLK/ps5_next_menu/commit/af72c9b))",
+        "Refined Settings, Log Viewer, and Manage Sources UI elements to fit narrower viewports and mobile screens. ([b3fe1b5](https://github.com/itsPLK/ps5_next_menu/commit/b3fe1b5))",
+        "**Daemon Codebase Decomposition**: Decomposed monolithic `main.c` and `payload_mgr.c` into 8 separate, single-responsibility modules (`http_server`, `repository`, `sources`, `config`, `log_server`, `json_helpers`, `sha256`, and `process_mgr`) for easier maintainability. ([2189ee9](https://github.com/itsPLK/ps5_next_menu/commit/2189ee9))",
+        "**Disc Player Kill (for BD-JB users)**: Reduced total wait time from 8s to 2s during the disc player suspension process. ([7a001e4](https://github.com/itsPLK/ps5_next_menu/commit/7a001e4))",
+        "**Log Polish**: Polling-related logs (`/list_payloads`, etc.) are now muted under normal operating conditions to prevent spamming output, and explicit logs are printed for process kill requests. ([0bf2b5e](https://github.com/itsPLK/ps5_next_menu/commit/0bf2b5e))",
+        "**Custom Repositories Guide**: Created a comprehensive documentation guide ([CUSTOM_REPOSITORIES.md](CUSTOM_REPOSITORIES.md)) explaining the JSON structure required to host third-party payload repositories. ([0e0a434](https://github.com/itsPLK/ps5_next_menu/commit/0e0a434))"
+      ]
+    },
+    {
+      "version": "0.2.0",
+      "fileName": "pldmgr_v0.2.0.elf",
+      "filePath": "payloads/payload-manager/0.2.0/pldmgr_v0.2.0.elf",
+      "downloadUrl": "https://github.com/itsPLK/ps5-payload-manager/releases/download/v0.2.0/pldmgr_v0.2.0.elf",
+      "hash": "511c6b687c5a4245323977f5d851f81050c7c7f88aa16b58ae47111a5280d792",
+      "fileSize": 2017552,
+      "releaseDate": "2026-06-01",
+      "isDefault": false,
+      "isPreRelease": false,
+      "changelog": [
+        "**Sidebar State Persistence**: The sidebar's expanded/collapsed state is now persisted in `localStorage` across page reloads. ([7570084](https://github.com/itsPLK/ps5_next_menu/commit/7570084))",
+        "**Settings Page Redesign**: Updated `SettingsView` layout to a responsive grid for better visual alignment and UI consistency. ([2e7de34](https://github.com/itsPLK/ps5_next_menu/commit/2e7de34))",
+        "**UX & Navigation Enhancements**:",
+        "Added automatic scrolling to the **USB Storage** section when clicking the redirect button in the Autoload section. ([6d14acf](https://github.com/itsPLK/ps5_next_menu/commit/6d14acf))",
+        "Added automatic scrolling to the top of the main container when changing views. ([75b20ce](https://github.com/itsPLK/ps5_next_menu/commit/75b20ce))",
+        "**Visual Polish**:",
+        "Added dedicated favicon and application icons. ([c8c380b](https://github.com/itsPLK/ps5_next_menu/commit/c8c380b))",
+        "Fixed alignment and spacing on the `DonateView`. ([10c4233](https://github.com/itsPLK/ps5_next_menu/commit/10c4233))",
+        "Refined download modal title. ([7dee294](https://github.com/itsPLK/ps5_next_menu/commit/7dee294))",
+        "**Directory Cleanup**: Empty directories are now automatically cleaned up after deleting a payload (fixes [#24](https://github.com/itsPLK/ps5-payload-manager/issues/24)). ([5ff5295](https://github.com/itsPLK/ps5_next_menu/commit/5ff5295))"
+      ]
+    },
+    {
+      "version": "0.1.1",
+      "fileName": "pldmgr-v0.1.1.elf",
+      "filePath": "payloads/payload-manager/0.1.1/pldmgr-v0.1.1.elf",
+      "downloadUrl": "https://github.com/itsPLK/ps5-payload-manager/releases/download/v0.1.1/pldmgr-v0.1.1.elf",
+      "hash": "33029ec7e3fb82f63839582169ab44f01650547870050e4ee8f76eaaa8733ce2",
+      "fileSize": 2033936,
+      "releaseDate": "2026-05-02",
+      "isDefault": false,
+      "isPreRelease": false,
+      "changelog": [
+        "Fixes [Frontend not rendering correctly on lower FW](https://github.com/itsPLK/ps5-payload-manager/issues/2)"
+      ]
+    },
+    {
+      "version": "0.1.0",
+      "fileName": "pldmgr_v0.1.0.elf",
+      "filePath": "payloads/payload-manager/0.1.0/pldmgr_v0.1.0.elf",
+      "downloadUrl": "https://github.com/itsPLK/ps5-payload-manager/releases/download/v0.1.0/pldmgr_v0.1.0.elf",
+      "hash": "71ef59287f1c708e3c16575574a45396d3d6ac1b5bf3ca518b1e3bf9485d224c",
+      "fileSize": 2050320,
+      "releaseDate": "2026-04-30",
+      "isDefault": false,
+      "isPreRelease": false,
+      "changelog": [
+        "Initial release"
+      ]
+    }
+  ],
+  "supportedFirmwares": []
+}

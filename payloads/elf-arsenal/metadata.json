@@ -1,0 +1,56 @@
+{
+  "license": {
+    "type": "Unknown",
+    "url": "https://github.com//blob/main/LICENSE"
+  },
+  "id": "elf-arsenal",
+  "displayTitle": "Elf Arsenal",
+  "description": "All-in-one PS5 utility dashboard and successor to Sonic Loader - launch games, manage cheats, install homebrew and PKGs, file transfer, fan control, trophy and save tools, all from a browser WebUI.",
+  "authors": [
+    "soniciso",
+    "voidwhisper",
+    "earthonion"
+  ],
+  "projectUrl": "https://git.earthonion.com/soniciso/elf-arsenal",
+  "sourceRepo": "",
+  "toPort": 9021,
+  "versions": [
+    {
+      "version": "1.6.4",
+      "fileName": "elf-arsenal.elf",
+      "filePath": "payloads/elf-arsenal/1.6.4/elf-arsenal.elf",
+      "downloadUrl": "",
+      "hash": "64c162cf7a4bf963733142a4995fc02ba9f2f09612fa9e2e243733cdbbaae78f",
+      "fileSize": 4642864,
+      "releaseDate": "2026-06-01",
+      "isDefault": true,
+      "isPreRelease": false,
+      "changelog": []
+    },
+    {
+      "version": "1.6.3",
+      "fileName": "elf-arsenal.elf",
+      "filePath": "payloads/elf-arsenal/1.6.3/elf-arsenal.elf",
+      "downloadUrl": "",
+      "hash": "174b11bb0ac245400e500adcf0fe6beb9041c8fe666d8d494372bd8a5053eab9",
+      "fileSize": 5265472,
+      "releaseDate": "2026-05-31",
+      "isDefault": false,
+      "isPreRelease": false,
+      "changelog": []
+    },
+    {
+      "version": "1.6.2",
+      "fileName": "elf-arsenal.elf",
+      "filePath": "payloads/elf-arsenal/1.6.2/elf-arsenal.elf",
+      "downloadUrl": "",
+      "hash": "cc1201385511f6cd4b1de71c4ebc69d201a7ea95882a783ac7d913414cae0602",
+      "fileSize": 5199936,
+      "releaseDate": "2026-05-27",
+      "isDefault": false,
+      "isPreRelease": false,
+      "changelog": []
+    }
+  ],
+  "supportedFirmwares": []
+}
