@@ -1,0 +1,74 @@
+{
+  "license": {
+    "type": "GPL-3.0",
+    "url": "https://github.com/drakmor/nanoDNS/blob/main/LICENSE"
+  },
+  "id": "nanodns",
+  "displayTitle": "nanoDNS",
+  "description": "DNS proxy server - blocks PSN and console update domains via local IPv4 overrides and forwards other queries to upstream resolvers. Listens on port 53.",
+  "authors": [
+    "drakmor"
+  ],
+  "projectUrl": "https://github.com/drakmor/nanoDNS",
+  "sourceRepo": "drakmor/nanoDNS",
+  "toPort": 9021,
+  "versions": [
+    {
+      "version": "0.3",
+      "fileName": "nanodns.elf",
+      "filePath": "payloads/nanodns/0.3/nanodns.elf",
+      "downloadUrl": "https://github.com/drakmor/nanoDNS/releases/download/0.3/nanodns.elf",
+      "hash": "ce1c8b31036ab948da65b362a4b6f249ffca8a555fc5bc4b051ec65d041bc944",
+      "fileSize": 132344,
+      "releaseDate": "2026-06-03",
+      "isDefault": true,
+      "isPreRelease": false,
+      "changelog": [
+        "The PS4 version has been fixed (GoldenHEN compatability)",
+        "PS5 up to 13.20 FW",
+        "PS4 up to 13.50 FW"
+      ]
+    },
+    {
+      "version": "0.2",
+      "fileName": "nanodns.elf",
+      "filePath": "payloads/nanodns/0.2/nanodns.elf",
+      "downloadUrl": "https://github.com/drakmor/nanoDNS/releases/download/0.2/nanodns.elf",
+      "hash": "278732b2f5ae801d5f9a303d8fc96d97f7bf153833aa058534a41ef028d76c86",
+      "fileSize": 132344,
+      "releaseDate": "2026-03-21",
+      "isDefault": false,
+      "isPreRelease": false,
+      "changelog": [
+        "Added PS4 support",
+        "Added configurable bind address, defaulting to 127.0.0.1",
+        "Added automatic recovery for listening and upstream sockets",
+        "Improved upstream DNS failover behavior",
+        "Improved domain mask matching",
+        "Improved config validation and warning messages",
+        "Log file is now overwritten on each startup",
+        "PS5 up to 13.20 FW",
+        "PS4 up to 13.50 FW"
+      ]
+    },
+    {
+      "version": "0.1",
+      "fileName": "nanodns.elf",
+      "filePath": "payloads/nanodns/0.1/nanodns.elf",
+      "downloadUrl": "https://github.com/drakmor/nanoDNS/releases/download/0.1/nanodns.elf",
+      "hash": "cc18b5461a0e868b31b5ac77bda9902cc7354864f55de86f77945ad6ce2985f3",
+      "fileSize": 170552,
+      "releaseDate": "2026-03-11",
+      "isDefault": false,
+      "isPreRelease": false,
+      "changelog": [
+        "First version"
+      ]
+    }
+  ],
+  "supportedFirmwares": [
+    "3.",
+    "4.",
+    "5."
+  ]
+}
