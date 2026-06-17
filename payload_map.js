@@ -2389,3 +2389,33 @@ const payload_map = [
         visible: true
     },
 ];
+
+var payloadDisplayOrder = [
+    "ps5-linux-loader",
+    "umtx2-host",
+    "elf-arsenal",
+    "shadowmountplus",
+    "payload-manager",
+    "nanodns"
+];
+
+for (var payloadIndex = 0; payloadIndex < payload_map.length; payloadIndex++) {
+    payload_map[payloadIndex]._displayOrderIndex = payloadIndex;
+}
+
+payload_map.sort(function (a, b) {
+    var aOrder = payloadDisplayOrder.indexOf(a.id);
+    var bOrder = payloadDisplayOrder.indexOf(b.id);
+
+    if (aOrder !== -1 || bOrder !== -1) {
+        if (aOrder === -1) return 1;
+        if (bOrder === -1) return -1;
+        return aOrder - bOrder;
+    }
+
+    return a._displayOrderIndex - b._displayOrderIndex;
+});
+
+for (var payloadCleanupIndex = 0; payloadCleanupIndex < payload_map.length; payloadCleanupIndex++) {
+    delete payload_map[payloadCleanupIndex]._displayOrderIndex;
+}
