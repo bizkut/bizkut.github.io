@@ -14,12 +14,12 @@
   "toPort": 9021,
   "versions": [
     {
-      "version": "0.1.0",
+      "version": "2.1",
       "fileName": "ps5-linux-loader.elf",
-      "filePath": "payloads/ps5-linux-loader/0.1.0/ps5-linux-loader.elf",
-      "downloadUrl": "https://github.com/bizkut/ps5-linux-loader/releases/download/v0.1.0/ps5-linux-loader.elf",
-      "hash": "40d69da072462d7c217e6a742cbd61072e701d13a2cb42d7ccacc14eefa24405",
-      "fileSize": 177144,
+      "filePath": "payloads/ps5-linux-loader/2.1/ps5-linux-loader.elf",
+      "downloadUrl": "https://github.com/bizkut/ps5-linux-loader/releases/download/v2.1/ps5-linux-loader.elf",
+      "hash": "c1014a153e4f60449fd88d6799abfb46d6fb6c3048d77c9641bc8d38d96ead0a",
+      "fileSize": 176832,
       "releaseDate": "2026-06-20",
       "isDefault": true,
       "isPreRelease": false,
@@ -32,17 +32,21 @@
       ]
     },
     {
-      "version": "2.1",
+      "version": "0.1.0",
       "fileName": "ps5-linux-loader.elf",
-      "filePath": "payloads/ps5-linux-loader/2.1/ps5-linux-loader.elf",
-      "downloadUrl": "https://github.com/bizkut/ps5-linux-loader/releases/download/v2.1/ps5-linux-loader.elf",
-      "hash": "c1014a153e4f60449fd88d6799abfb46d6fb6c3048d77c9641bc8d38d96ead0a",
-      "fileSize": 176832,
-      "releaseDate": "2026-05-17",
+      "filePath": "payloads/ps5-linux-loader/0.1.0/ps5-linux-loader.elf",
+      "downloadUrl": "https://github.com/bizkut/ps5-linux-loader/releases/download/v0.1.0/ps5-linux-loader.elf",
+      "hash": "40d69da072462d7c217e6a742cbd61072e701d13a2cb42d7ccacc14eefa24405",
+      "fileSize": 177144,
+      "releaseDate": "2026-06-20",
       "isDefault": false,
       "isPreRelease": false,
       "changelog": [
-        "Added 5.00, 5.02 and 5.10 support"
+        "Initial ESP32 wake beacon release.",
+        "Adds UDP wake beacon support for the companion ESP32 wakeup project: https://github.com/bizkut/ps5-esp32-wakeup",
+        "Broadcasts a PS5 Linux armed payload before entering rest mode",
+        "Adds configurable beacon token, port, repeat count, and interval",
+        "Adds GitHub Actions build and release workflow"
       ]
     },
     {
